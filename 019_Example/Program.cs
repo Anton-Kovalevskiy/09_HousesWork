@@ -6,10 +6,15 @@
 23432 -> да
 */
 
-// Решение задачи #19 для ЛЮБОГО введённого ЧИСЛА
+// Решение задачи #19 (работает для ЛЮБОГО введённого ЧИСЛА, если убрать условие пятизначного)
 
 Console.Write("Введите число ->");
 string? number = Console.ReadLine();
+if (number.Length != 5)
+{
+    Console.Write("Введено не пятизначное число!");
+    return;
+}
 int i = number.Length;
 char[] reverseChar = new char[i];
 int k = 0;
